@@ -4,49 +4,27 @@
 </script>
 
 <svelte:head>
-	<title>Home</title>
+	<title>What's going on?</title>
 </svelte:head>
 
-<section>
-	<h1>
-		<span class="welcome">
-			<picture>
-				<img src={map} alt="Map" />
-			</picture>
-		</span>
-
-		Nathan is a noble goose
-	</h1>
-
-	<Counter />
-</section>
+<img src={map} alt=" " class="backdrop"/>
+<h1>
+  Nathan is a noble goose
+</h1>
 
 <style>
-	section {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		flex: 0.6;
-	}
 
 	h1 {
 		width: 100%;
+    color: blue;
+    font-size: 40px;
 	}
 
-	.welcome {
+	.backdrop {
 		display: block;
-		position: relative;
-		width: 100%;
-		height: 0;
-		padding: 0 0 calc(100% * 495 / 2048) 0;
-	}
-
-	.welcome img {
 		position: absolute;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		display: block;
+    z-index: -100;
+		width: 100vw;
 	}
+
 </style>
